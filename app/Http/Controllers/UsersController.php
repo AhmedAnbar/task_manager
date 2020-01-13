@@ -68,7 +68,7 @@ class UsersController extends Controller
       'roles' => ['required', 'array', 'min:1'],
       'permissions' => ['array'],
     ]);
-    $
+    
     $requestData = $request->all();
     $user = User::create($requestData);
     $user->syncRoles($request->roles);
